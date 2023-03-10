@@ -25,16 +25,8 @@ body {
   margin-top: 8rem;
   padding: 1rem;
   animation: fadeIn 1s;
-  /* transition: 0.25s all ease-in-out; */
 }
 
-/* .aboutAnimation {
-  animation: fadeIn 1s;
-}
-
-.hide {
-  display: none;
-} */
 
 .points {
   font-family: "Poppins";
@@ -43,7 +35,6 @@ body {
   font-size: 3rem;
   color: #4caf50;
   margin: 0px 0px 15px 0px;
-  /* animation: fadeIn 1s; */
 }
 
 .stars img {
@@ -59,7 +50,6 @@ body {
   font-size: 3rem;
   color: #000000;
   margin: 0px 0px 0.6rem 0px;
-  animation: fadeIn 1s;
 }
 
 .position {
@@ -110,6 +100,7 @@ body {
   width: 65%;
   align-items: center;
   /* z-index: 0;*/
+  
 }
 
 /* ----------------------------------- */
@@ -247,6 +238,7 @@ body {
 .profile-img {
   width: 14rem;
   height: 14rem;
+  animation: fadeIn 1s;
 }
 
 .arrow-left {
@@ -282,6 +274,7 @@ body {
   color: #000000;
   z-index: 30;
   margin-top: 0.8rem;
+  animation: fadeIn 1s;
 }
 
 
