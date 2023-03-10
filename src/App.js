@@ -38,18 +38,13 @@ function App() {
       CustomCarousel.prototype.addListeners = function () {
         var slider = this;
 
-        console.log("adding event listeners ...");
-        console.log(this.next, this.prev);
-
         if (this.next) {
-          console.log("added event listener to next");
           this.next.addEventListener("click", function () {
             slider.setSlide(slider.activeN + 1);
           });
         }
 
         if (this.prev) {
-          console.log("added event listener to prev");
           this.prev.addEventListener("click", function () {
             slider.setSlide(slider.activeN - 1);
           });
@@ -125,7 +120,6 @@ function App() {
     };
 
     const carouselInit = () => {
-      console.log("Added Event Listener ...");
       if (plugins.customCarousel.length) {
         for (var i = 0; i < plugins.customCarousel.length; i++) {
            initCarousel({
