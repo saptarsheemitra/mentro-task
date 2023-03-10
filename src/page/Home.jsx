@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./home.css";
 import stars from "../assets/stars.png";
 import p1 from "../assets/p1.png";
@@ -7,40 +7,46 @@ import p3 from "../assets/p3.png";
 import p4 from "../assets/p4.png";
 import p5 from "../assets/p5.png";
 import p6 from "../assets/p6.png";
-import p7 from "../assets/p7.png";
-import p8 from "../assets/p8.png";
+// import p7 from "../assets/p7.png";
+// import p8 from "../assets/p8.png";
 import arrow from "../assets/arrow.png";
-import {data} from "../data.js";
+import { data } from "../data.js";
 
 
 function Home() {
   const [count, setCount] = useState(0);
-  // const [url,setUrl] = useState();
-  
-  function increaseCount(){
-    if (count<7){
-      let x = count+1
+
+  console.log(data)
+  console.log(p1)
+
+  useEffect(() => {
+    console.log(data[count].img)
+  }, [count]);
+
+  const increaseCount = () => {
+    if (count < 7) {
+      let x = count + 1;
       setCount(x);
-      }
-    else{
-        setCount(0);
-      }
-  }
-  function decreaseCount(){
-    if (count>0){
-    let x = count-1
-    setCount(x);
+    } else {
+      setCount(0);
     }
-    else{
+  };
+
+  const decreaseCount = () => {
+    if (count > 0) {
+      let x = count - 1;
+      setCount(x);
+    } else {
       setCount(7);
     }
-  }
+  };
+
   return (
     // <>
     <div className="container">
       <div className="left-container">
-        <div className="about" >
-          <div className="points">{data[count].rating}</div>
+        <div className="about">
+            <div className="points">{data[count].rating}</div>
           <div className="stars">
             <img src={stars} alt="" />
           </div>
@@ -106,12 +112,12 @@ function Home() {
             </div>
             <div className="item">
               <div className="dot">
-                <img className="people-img" src={p7} alt="" />
+                <img className="people-img" src={p6} alt="" />
               </div>
             </div>
             <div className="item">
               <div className="dot">
-                <img className="people-img" src={p8} alt="" />
+                <img className="people-img" src={p6} alt="" />
               </div>
             </div>
           </div>
@@ -121,7 +127,7 @@ function Home() {
             <img className="arrow-left" src={arrow} alt="" />
           </div>
           <div>
-            <img className="profile-img" src={p1} alt="" />
+            <img className="profile-img" src={data[count].img} alt="" />
           </div>
           <div id="next-temp" onClick={increaseCount}>
             <img className="arrow-right" src={arrow} alt="" />

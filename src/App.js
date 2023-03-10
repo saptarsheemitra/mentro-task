@@ -45,7 +45,6 @@ function App() {
           console.log("added event listener to next");
           this.next.addEventListener("click", function () {
             slider.setSlide(slider.activeN + 1);
-            console.log("daba diya");
           });
         }
 
@@ -129,7 +128,7 @@ function App() {
       console.log("Added Event Listener ...");
       if (plugins.customCarousel.length) {
         for (var i = 0; i < plugins.customCarousel.length; i++) {
-          var carousel = initCarousel({
+           initCarousel({
             node: plugins.customCarousel[i],
             speed: plugins.customCarousel[i].getAttribute("data-speed"),
             autoplay: plugins.customCarousel[i].getAttribute("data-autoplay"),
